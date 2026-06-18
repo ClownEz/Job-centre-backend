@@ -23,3 +23,5 @@ class CompanyOut(BaseModel):
 	description : str
 	industry : str
 	location : str | None
+	phone : str | None
+	website : str | None
