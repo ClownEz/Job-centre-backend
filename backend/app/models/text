@@ -1,0 +1,88 @@
+Table user {
+  id int [pk, increment]
+  name varchar [not null]
+  email varchar [unique, not null]
+  phone varchar
+  pass varchar [not null]
+  role int [default: 0, note: '0=соискатель, 1=работодатель, 2=админ']
+}
+
+Table companies {
+  id int [pk, increment]
+  user_id int [not null, ref: > user.id]
+  name varchar [not null]
+  description text
+  website varchar
+  industry varchar
+}
+
+Table resume {
+  id int [pk, increment]
+  user_id int [not null, ref: > user.id]
+  title varchar
+  created_at timestamp [default: `now()`]
+  summary text
+  desired_salary int
+}
+
+Table category {
+  id int [pk, increment]
+  name varchar [not null]
+  parent_id int [ref: > category.id, null]
+}
+
+Table jobs {
+  id int [pk, increment]
+  company_id int [not null, ref: > companies.id]
+  category_id int [ref: > category.id]
+  name varchar [not null]
+  description text
+  requirements text
+  salary_min int
+  salary_max int
+  posted_data date
+  status varchar [default: 'active']
+  experience_level varchar
+}
+
+Table applications {
+  id int [pk, increment]
+  job_id int [not null, ref: > jobs.id]
+  resume_id int [not null, ref: > resume.id]
+  letter text
+  status varchar [default: 'pending']
+}
+
+Table work_exp {
+  id int [pk, increment]
+  resume_id int [not null, ref: > resume.id]
+  company varchar
+  position varchar
+  start_date date
+  end_date date
+}
+
+Table education {
+  id int [pk, increment]
+  resume_id int [not null, ref: > resume.id]
+  institution varchar
+  degree varchar
+  graduation_year int
+}
+
+Table skils {
+  id int [pk, increment]
+  name varchar [not null]
+  category_id int [not null, ref: > category.id]
+}
+
+Table resume_skills {
+  resume_id int [ref: > resume.id]
+  skill_id int [ref: > skils.id]
+}
+
+Table job_skills {
+  job_id int [ref: > jobs.id]
+  skill_id int [ref: > skils.id]
+}
+

@@ -1,0 +1,31 @@
+.footer {
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 24px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.footer-links span {
+  color: var(--color-footer-text);
+  font-size: 0.85rem;
+  cursor: default;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}

@@ -1,0 +1,116 @@
+.company-detail-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.company-detail-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-top: 14px;
+}
+
+.company-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.company-detail-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.company-detail-header h1 {
+  margin: 0 0 3px;
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.company-detail-tag {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.company-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #f8f9fc;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.company-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+.company-info-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.company-info-item a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.company-info-item a:hover {
+  text-decoration: underline;
+}
+
+.company-detail-section {
+  margin-bottom: 0;
+}
+
+.company-detail-section h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.company-detail-section p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.company-vacancies-section {
+  margin-top: 28px;
+}
+
+.company-vacancies-section h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 14px;
+}
+
+.company-vacancies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .company-detail-card { padding: 20px; }
+  .company-vacancies-grid { grid-template-columns: 1fr; }
+}

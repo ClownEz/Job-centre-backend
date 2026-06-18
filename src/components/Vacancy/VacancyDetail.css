@@ -1,0 +1,246 @@
+.vacancy-detail-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.vacancy-detail-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-top: 14px;
+}
+
+.vacancy-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vacancy-detail-header h1 {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+
+.vacancy-detail-company {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.vacancy-detail-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #f8f9fa;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.meta-item {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.meta-item strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.vacancy-detail-section {
+  margin-bottom: 20px;
+}
+
+.vacancy-detail-section h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.vacancy-detail-section p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.vacancy-detail-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.vacancy-applications {
+  margin-top: 28px;
+}
+
+.vacancy-applications h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 14px;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.application-mini-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.app-mini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 10px;
+}
+
+.app-mini-header strong {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.app-mini-contact {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0 0 8px;
+}
+
+.app-mini-letter {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.company-link {
+  color: var(--color-text);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color var(--transition);
+  cursor: pointer;
+}
+
+.company-link:hover {
+  color: var(--color-primary);
+}
+
+.company-link:hover .company-badge {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.company-badge {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition);
+}
+
+.company-inline-block {
+  display: block;
+  background: #f8f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.company-inline-block:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(79, 108, 247, 0.1);
+}
+
+.company-inline-block h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.company-inline-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.company-inline-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.company-inline-body strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 3px;
+}
+
+.company-inline-body p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.company-arrow {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.company-inline-block:hover .company-arrow {
+  transform: translateX(3px);
+  color: var(--color-primary);
+}
+
+.status-select {
+  padding: 4px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.status-pending { color: #92400e; background: #fef3c7; }
+.status-reviewed { color: #4f6cf7; background: #eef0ff; }
+.status-accepted { color: #10b981; background: #d1fae5; }
+.status-rejected { color: #ef4444; background: #fee2e2; }
