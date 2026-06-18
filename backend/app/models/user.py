@@ -15,7 +15,7 @@ class User(Base):
 	name : Mapped[str] = mapped_column(String(255))
 	email : Mapped[str] = mapped_column(String(255),unique=True)
 	phone : Mapped[str | None] = mapped_column(String(15),nullable=True)
-	password_hash : Mapped[str] = mapped_column(String(255))
+	password : Mapped[str] = mapped_column(String(255))
 	role : Mapped[int] = mapped_column(Integer,default=0)
 	created_at : Mapped[datetime] = mapped_column(DateTime,server_default=func.now())
 
